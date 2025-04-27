@@ -130,6 +130,8 @@ export default function HomeScreen() {
           keyExtractor={(item) => item.id.toString()}
           renderItem={renderItem}
           contentContainerStyle={styles.list}
+          onRefresh={fetchItems}
+          refreshing={loading}
         />
       )}
       <View style={{ borderTopColor: '#ccc', borderTopWidth: 1, display: 'flex', flexDirection: 'column', gap: 10, padding: 10 }}>
